@@ -1,7 +1,14 @@
 function getFormvalue() {
     //Write your code here
-	var fname = document.getElementById("fname").value;
-	var fname = document.getElementById("lname").value;
-	alert(fname + " " + lname);
+	
+let fname = document.querySelector('input[name="fname"]').value;
+let lname = document.querySelector('input[name="lname"]').value;
+let fullName = fname + " " + lname;
+alert(fullName);
+document.querySelector('form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    getFormvalue();
+});
 	
 }
+
